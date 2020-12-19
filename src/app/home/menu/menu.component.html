@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-3 p-2">
+
+    <button
+      class="btn btn-block btn-outline-info"
+      (click)="changeCategory()"> All </button>
+
+    <button
+      *ngFor="let cat of categories"
+      class="btn btn-outline-info btn-block"
+      [class.active]="cat == selectedCategory"
+      (click)="changeCategory(cat)"> {{ cat }} </button>
+  </div>
+
+  <div class="col-9 p-2">
+    <div *ngFor="let product of products" class="card m-1 p-1 bg-light">
+
+      <h4>
+        {{ product.name }}
+        <span class="btn btn-outline-info float-right">
+          {{ product.price | currency: "Euro ":"symbol":"2.2-2" }}
+        </span>
+      </h4>
+
+      <div class="card-text bg-white p-1">{{ product.description }} | {{product.category}}</div>
+
+    </div>
+  </div>
+</div>

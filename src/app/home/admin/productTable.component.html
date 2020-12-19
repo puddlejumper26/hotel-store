@@ -1,0 +1,32 @@
+<table class="table table-sm table-striped">
+  <thead>
+      <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let p of getProducts()">
+          <td>{{p.id}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.category}}</td>
+          <td>{{p.price }}</td>
+          <td>
+              <button class="btn btn-sm btn-warning"
+                      [routerLink]="['/admin/products/edit', p.id]">
+                  Edit
+              </button>
+              <span style="color: #17a2b8;">|</span>
+              <button class="btn btn-sm btn-danger" (click)="deleteProduct(p.id)">
+                  Delete
+              </button>
+          </td>
+      </tr>
+  </tbody>
+</table>
+<button class="btn btn-outline-info" routerLink="/admin/products/create">
+  Create New Product
+</button>
