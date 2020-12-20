@@ -8,8 +8,7 @@ export class Order {
   public title: string;
   public number: number;
 
-  constructor(public cart: Cart) {
-  }
+  constructor(public cart: Cart) {}
 
   clear() {
     this.lastName = null;
@@ -17,4 +16,3 @@ export class Order {
     this.cart.clear();
   }
 }
-

@@ -18,9 +18,9 @@ export class RestDataSource {
     this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
   }
 
-/**
- * Product Related
- */
+  /**
+   * Product Related
+   */
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseUrl + 'products');
   }
@@ -48,9 +48,9 @@ export class RestDataSource {
     );
   }
 
-/**
- * Order Related
- */
+  /**
+   * Order Related
+   */
   saveOrder(order: Order): Observable<Order> {
     return this.http.post<Order>(this.baseUrl + 'orders', order);
   }

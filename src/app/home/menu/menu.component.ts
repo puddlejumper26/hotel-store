@@ -8,7 +8,7 @@ import { ProductRepository } from 'src/app/services/product.repository';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
   public selectedCategory = null;
@@ -16,9 +16,10 @@ export class MenuComponent implements OnInit {
   constructor(
     private cart: Cart,
     private repository: ProductRepository,
-    private route: Router) { }
+    private route: Router
+  ) {}
 
-  ngOnInit(): void {  }
+  ngOnInit(): void {}
 
   get products(): Product[] {
     return this.repository.getProducts(this.selectedCategory);
@@ -36,5 +37,4 @@ export class MenuComponent implements OnInit {
     this.cart.addLine(product);
     this.route.navigateByUrl('/cart');
   }
-
 }
