@@ -22,7 +22,11 @@
         </span>
       </h4>
 
-      <div class="card-text bg-white p-1">{{ product.description }} | {{product.category}}</div>
+      <div class="card-text bg-white p-1">{{ product.description }} | {{product.category}}
+        <button class="btn btn-success btn-sm float-right" (click)="addProductToCart(product)">
+          Add to Cart
+        </button>
+      </div>
 
     </div>
   </div>

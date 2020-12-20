@@ -1,9 +1,11 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+
 import { AdminComponent } from "./home/admin/admin.component";
+import { CartDetailComponent } from "./home/cart/cartDetail.component";
+import { MenuComponent } from "./home/menu/menu.component";
 import { ProductEditorComponent } from "./home/admin/productEdit.component";
 import { ProductTableComponent } from "./home/admin/productTable.component";
-import { MenuComponent } from "./home/menu/menu.component";
 
 const routes: Routes = [
   {
@@ -13,6 +15,10 @@ const routes: Routes = [
   {
     path: 'menu',
     component: MenuComponent,
+  },
+  {
+    path: 'cart',
+    component: CartDetailComponent,
   },
   {
     path: 'admin',

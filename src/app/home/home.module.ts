@@ -10,10 +10,11 @@ import { HomeComponent } from './home.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProductEditorComponent } from './admin/productEdit.component';
 import { ProductTableComponent } from './admin/productTable.component';
+import { CartDetailComponent } from './cart/cartDetail.component';
 
 
 @NgModule({
-  declarations: [AdminComponent, CartSummaryComponent, HomeComponent, MenuComponent, ProductEditorComponent, ProductTableComponent],
+  declarations: [AdminComponent, CartDetailComponent, CartSummaryComponent, HomeComponent, MenuComponent, ProductEditorComponent, ProductTableComponent],
   imports: [BrowserModule, CommonModule, FormsModule, RouterModule],
   exports: [HomeComponent, MenuComponent, AdminComponent, ProductTableComponent, ProductEditorComponent],
 })

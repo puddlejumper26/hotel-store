@@ -9,11 +9,13 @@ export class Cart {
 
   addLine(product: Product, quantity: number = 1) {
     let line = this.lines.find((line) => line.product.id === product.id);
+
     if (line !== undefined) {
       line.quantity += quantity;
     } else {
       this.lines.push(new CartLine(product, quantity));
     }
+
     this.recalculate();
   }
 

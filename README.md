@@ -3,6 +3,12 @@
 # 1.0 Desc
 This is the Simulation of a hotel restaurant.
 
+## 1.1 How to run this APP
+- `npm run json`
+- now could check the data under `localhost:3500`
+- `ng serve`
+- now could check the content under `localhost:4200`
+
 # 2.0 Tech Stack & IDE
 - Angular 10, TS, Bootstrap
 - JSON-Server
@@ -24,11 +30,14 @@ This is the Simulation of a hotel restaurant.
 - When a dish is created or modified, the status is updated on the `Menu` page automatically
 
 ### 3.3 Cart
-- Displays on the top right conor of the home page
-- Composes by two parts:
+- CartSummay component Displays on the top right conor of the home page
+  - Composes by two parts:
   - `Your cart:` displays dishes number in the cart, when none displays empty
   - `Click CART` is a link navigates to the cart summary table
-
+- CartDetail component is the table displays to the custome regarding the ordered details
+  - Composes by a table and buttons
+  - Continue Shopping button navigates back to the menu page
+  - Checkout navigates to the checkout form
 
 # 4.0 Problems
 
