@@ -1,0 +1,74 @@
+<div *ngIf="orderSent" class="m-2 text-center">
+  <h2>Thanks!</h2>
+  <p>Thanks for placing your order.</p>
+  <p>We'll serve your food as soon as possible.</p>
+  <button class="btn btn-outline-info" [routerLink]="['/menu']">Return to Menu</button>
+</div>
+
+<form *ngIf="!orderSent" #form="ngForm" novalidate (ngSubmit)="submitOrder(form)" class="m-2">
+
+  <div class="form-row">
+    <!-- Title -->
+    <div class="form-group col-2">
+      <label>Title</label>
+      <select class="form-control"
+            #title="ngModel"
+            required
+            name="title"
+            [(ngModel)]="order.title">
+        <option value=""></option>
+        <option value="Mr">Mr</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Ms">Ms</option>
+        <option value="Miss">Miss</option>
+        <option value="Famiely">Famliy</option>
+      </select>
+      <ul class="text-danger list-unstyled" *ngIf="(submitted || title.dirty) && title.invalid">
+        <li *ngFor="let error of getValidationMessages(title)">
+          {{error}}
+        </li>
+      </ul>
+    </div>
+
+
+    <!--  Last  Name-->
+    <div class="form-group col-5">
+      <label>Last Name</label>
+      <input class="form-control ng-pristine ng-invalid ng-touched"
+            #lastName="ngModel"
+            name="lastName"
+            required
+            minlength="2"
+            pattern="^[A-Za-z]+$"
+            [(ngModel)]="order.lastName">
+      <ul class="text-danger list-unstyled" *ngIf="(submitted || lastName.dirty) && lastName.invalid">
+        <li *ngFor="let error of getValidationMessages(lastName)">
+          {{error}}
+        </li>
+      </ul>
+    </div>
+    <!--Table Number or Room Number-->
+    <div class="form-group col-5">
+      <label>Room / Table Number</label>
+      <input class="form-control"
+            #number="ngModel"
+            name="number"
+            required
+            [(ngModel)]="order.number"
+            minlength="1"
+            maxlength="10"
+            pattern="^\d*$"/>
+      <ul class="text-danger list-unstyled" *ngIf="(submitted || number.dirty) && number.invalid">
+        <li *ngFor="let error of getValidationMessages(number)">
+          {{error}}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button class="btn btn-secondary m-1" [routerLink]="['/cart']">Back</button>
+    <button class="btn btn-primary m-1" type="submit"
+             [class.btn-secondary]="submitted">Complete Order</button>
+  </div>
+</form>

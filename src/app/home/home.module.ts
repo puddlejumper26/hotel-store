@@ -11,11 +11,26 @@ import { MenuComponent } from './menu/menu.component';
 import { ProductEditorComponent } from './admin/productEdit.component';
 import { ProductTableComponent } from './admin/productTable.component';
 import { CartDetailComponent } from './cart/cartDetail.component';
-
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
-  declarations: [AdminComponent, CartDetailComponent, CartSummaryComponent, HomeComponent, MenuComponent, ProductEditorComponent, ProductTableComponent],
+  declarations: [
+    AdminComponent,
+    CartDetailComponent,
+    CartSummaryComponent,
+    CheckoutComponent,
+    HomeComponent,
+    MenuComponent,
+    ProductEditorComponent,
+    ProductTableComponent,
+  ],
   imports: [BrowserModule, CommonModule, FormsModule, RouterModule],
-  exports: [HomeComponent, MenuComponent, AdminComponent, ProductTableComponent, ProductEditorComponent],
+  exports: [
+    AdminComponent,
+    HomeComponent,
+    MenuComponent,
+    ProductEditorComponent,
+    ProductTableComponent,
+  ],
 })
-export class HomeModule { }
+export class HomeModule {}

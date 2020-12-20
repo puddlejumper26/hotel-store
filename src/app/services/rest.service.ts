@@ -1,8 +1,10 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Product } from '../model/product.model';
 import { HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { Order } from '../model/order.model';
+import { Product } from '../model/product.model';
 
 const PROTOCOL = 'http';
 const PORT = 3500;
@@ -32,7 +34,6 @@ export class RestDataSource {
   }
 
   updateProduct(product): Observable<Product> {
-    console.log(111111,this.getOptions)
     return this.http.put<Product>(
       `${this.baseUrl}products/${product.id}`,
       product,
@@ -45,6 +46,13 @@ export class RestDataSource {
       `${this.baseUrl}products/${id}`,
       this.getOptions()
     );
+  }
+
+/**
+ * Order Related
+ */
+  saveOrder(order: Order): Observable<Order> {
+    return this.http.post<Order>(this.baseUrl + 'orders', order);
   }
 
   private getOptions() {
