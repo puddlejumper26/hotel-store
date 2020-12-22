@@ -5,13 +5,14 @@ import { NgModule } from "@angular/core";
 import { RouterModule } from '@angular/router';
 
 import { AdminComponent } from './admin/admin.component';
+import { CartDetailComponent } from './cart/cartDetail.component';
 import { CartSummaryComponent } from './cart/cartSummary.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { HomeComponent } from './home.component';
 import { MenuComponent } from './menu/menu.component';
+import { OrderTableComponent } from './admin/orderTable.component';
 import { ProductEditorComponent } from './admin/productEdit.component';
 import { ProductTableComponent } from './admin/productTable.component';
-import { CartDetailComponent } from './cart/cartDetail.component';
-import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     CheckoutComponent,
     HomeComponent,
     MenuComponent,
+    OrderTableComponent,
     ProductEditorComponent,
     ProductTableComponent,
   ],

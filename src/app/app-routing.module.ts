@@ -7,6 +7,7 @@ import { CheckoutComponent } from "./home/checkout/checkout.component";
 import { MenuComponent } from "./home/menu/menu.component";
 import { ProductEditorComponent } from "./home/admin/productEdit.component";
 import { ProductTableComponent } from "./home/admin/productTable.component";
+import { OrderTableComponent } from "./home/admin/orderTable.component";
 
 const routes: Routes = [
   {
@@ -32,6 +33,7 @@ const routes: Routes = [
       { path: 'products/:mode/:id', component: ProductEditorComponent },
       { path: 'products/:mode', component: ProductEditorComponent },
       { path: 'products', component: ProductTableComponent },
+      { path: "orders", component: OrderTableComponent },
       { path: '**', redirectTo: 'products' },
     ],
   },

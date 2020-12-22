@@ -51,6 +51,10 @@ export class RestDataSource {
   /**
    * Order Related
    */
+  getOrders(): Observable<Order[]> {
+    return this.http.get<Order[]>(this.baseUrl + 'orders',this.getOptions());
+  }
+
   saveOrder(order: Order): Observable<Order> {
     return this.http.post<Order>(this.baseUrl + 'orders', order);
   }

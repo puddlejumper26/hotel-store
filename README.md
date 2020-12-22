@@ -9,6 +9,17 @@ This is the Simulation of a hotel restaurant.
 - `ng serve`
 - now could check the content under `localhost:4200`
 
+## 1.2 Final GIF Demo
+
+## 1.3 Time table for this project
+2020.12.16 | 12:30 - 12: 40 | Received the project file from Svenja, checked and asked whether using Angular is possible
+2020.12.17 | 10:26 | Received the replies from Svenja, Angular is possible
+2020.12.19 | 12:30 - 13:30 | Tried with Vue, and built a simpel local sample, with local CRUD functions
+2020.12.19 | 15:30 - 16:00 | Trying to install the files from api folder, run the npm install, but could not make it work don't know how to use this
+2020.12.19 | 21:30 - 03:00(12.20) | Used the JSON Server and data (please check data.js in the file) to build the app with Angular
+2020.12.21 | 23:00 - 24:00 | Added checkout component and order model, asked pass by solutions for JWT authentications on stackoverflower
+2020.12.22 | 23:30 - 0:30 | Added Order component for admin
+
 # 2.0 Tech Stack & IDE
 - Angular 10, TS, Bootstrap
 - JSON-Server
@@ -24,10 +35,15 @@ This is the Simulation of a hotel restaurant.
 
 ### 3.2 Admin
 - Display to the hotel employee
-- A table with dises details
-- Each item with edit and delete button
-- Could create new dish
-- When a dish is created or modified, the status is updated on the `Menu` page automatically
+- Products subpage
+  - With a button on the left side for the navigation
+  - A table with all dishes details (ID, Name, Category, Price)
+  - Each item with edit and delete button
+  - Could create new dish
+  - When a dish is created or modified, the status is updated on the `Menu` page automatically
+- Orders subpage
+  - With a button on the left side for the navigation
+  - A table with ordered dishes with details (Customer Name, Room/Table Number, Dish Name and Quantity)
 
 ### 3.3 Cart
 - CartSummay component Displays on the top right conor of the home page
@@ -35,15 +51,29 @@ This is the Simulation of a hotel restaurant.
   - `Your cart:` displays dishes number in the cart, when none displays empty
   - `Click CART` is a link navigates to the cart summary table
 - CartDetail component is the table displays to the custome regarding the ordered details
-  - Composes by a table and buttons
-  - Continue Shopping button navigates back to the menu page
-  - Checkout navigates to the checkout form
+  - A table displays all dishes added by clicking the `Add to cart` button
+  - Each line of the dish could be removed
+  - Each line of dish has a quantity number, which could be modified by clicking directly on the up/down arrow
+  - It has two buttons on the botton
+    - 'Continue Ordering' will navigate to the Menu page
+    - 'Checkout' will navigate to the Checkout component
+
+### 3.4 Checkout
+- Checkout component Displays to the customer
+  - It contains a form which has three places to fill in (Title, Last Name and Room/Talbe Number)
+  - The form is tempalte driven form, so it is valided directly inside the template
+  - It contains two button on the bottom
+    - `Back` button will navigate back to last page
+    - `Complete Order` button will close(or make it invisible) current form and display the Thanks info to the customer
 
 # 4.0 Problems
 
 ### 4.1 Authentication
-- Due to lack of authenication of the token, insdie the `Admin panel`the funciton of
+- Due to lack of authenication of the token,  `Admin panel` - `Products`
   - `edit` could not be saved  with 401
   - `Create New Product` could not be created but only with empty content, with 401
   - The above empty content row could not be edited nor deleted
   - Code inside `authMiddleware.js` needs to be modified
+- The same reason as above, `Admin panel` - `Orders`
+  - Data could not be displayed
+  - When the order was submitted in the checkout component, the status code is 204 (No Content)
