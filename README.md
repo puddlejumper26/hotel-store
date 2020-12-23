@@ -2,6 +2,7 @@
 
 # 1.0 Desc
 This is the Simulation of a hotel restaurant.
+There is also a simplified edition with VUE, please click [here](https://github.com/puddlejumper26/vue-demo/tree/master#vue-demo)
 
 ## 1.1 How to run this APP
 - `npm run json`
@@ -10,14 +11,14 @@ This is the Simulation of a hotel restaurant.
 - now could check the content under `localhost:4200`
 
 ## 1.2 Final GIF Demo
-
+![20201223_003827](https://user-images.githubusercontent.com/40550117/102943150-83732f00-44b7-11eb-9f98-b728c84e9f0f.gif)
 ## 1.3 Time table for this project
-2020.12.16 | 12:30 - 12: 40 | Received the project file from Svenja, checked and asked whether using Angular is possible
-2020.12.17 | 10:26 | Received the replies from Svenja, Angular is possible
-2020.12.19 | 12:30 - 13:30 | Tried with Vue, and built a simpel local sample, with local CRUD functions
-2020.12.19 | 15:30 - 16:00 | Trying to install the files from api folder, run the npm install, but could not make it work don't know how to use this
-2020.12.19 | 21:30 - 03:00(12.20) | Used the JSON Server and data (please check data.js in the file) to build the app with Angular
-2020.12.21 | 23:00 - 24:00 | Added checkout component and order model, asked pass by solutions for JWT authentications on stackoverflower
+2020.12.16 | 12:30 - 12: 40 | Received the project file from Svenja, checked and asked whether using Angular is possible<br>
+2020.12.17 | 10:26 | Received the replies from Svenja, Angular is possible<br>
+2020.12.19 | 12:30 - 13:30 | Tried with Vue, and built a simpel local sample, with local CRUD functions - Please check [this](https://github.com/puddlejumper26/vue-demo/tree/master#vue-demo)<br>
+2020.12.19 | 15:30 - 16:00 | Trying to install the files from api folder, run the npm install, but could not make it work don't know how to use this<br>
+2020.12.19 | 21:30 - 03:00(12.20) | Used the JSON Server and data (please check data.js in the file) to build the app with Angular<br>
+2020.12.21 | 23:00 - 24:00 | Added checkout component and order model, asked pass by solutions for JSON Server authentications on stackoverflower<br>
 2020.12.22 | 23:30 - 0:30 | Added Order component for admin
 
 # 2.0 Tech Stack & IDE
@@ -66,9 +67,7 @@ This is the Simulation of a hotel restaurant.
     - `Back` button will navigate back to last page
     - `Complete Order` button will close(or make it invisible) current form and display the Thanks info to the customer
 
-# 4.0 Problems
-
-### 4.1 Authentication
+# 4  Authentication Problem
 - Due to lack of authenication of the token,  `Admin panel` - `Products`
   - `edit` could not be saved  with 401
   - `Create New Product` could not be created but only with empty content, with 401
@@ -77,3 +76,8 @@ This is the Simulation of a hotel restaurant.
 - The same reason as above, `Admin panel` - `Orders`
   - Data could not be displayed
   - When the order was submitted in the checkout component, the status code is 204 (No Content)
+
+# 5 Conclusion
+- Need to know more about backend knowledge in order to handle the entire system
+- Need to know more about the Authenticaition
+- Vue is much lighter, I have huge interest to learn it
