@@ -4,6 +4,7 @@
 - This is the Simulation of a hotel restaurant.
 - There is also a simplified edition with VUE, please click [here](https://github.com/puddlejumper26/vue-demo/tree/master#vue-demo)
 - The functions are not complete due to authentication, but the codes for the functions should be complete. Please check the following content and also code in the components.
+- Normally due to incompletion it should not be delivered(released). But under current situation, code and ideas are just added as much as possbile.
 
 ## 1.1 How to run this APP
 - `npm run json`
@@ -18,7 +19,7 @@
 2020.12.17 | 10:26 | Received the replies from Svenja, Angular is possible<br>
 2020.12.19 | 12:30 - 13:30 | Tried with Vue, and built a simpel local sample, with local CRUD functions - Please check [this](https://github.com/puddlejumper26/vue-demo/tree/master#vue-demo)<br>
 2020.12.19 | 15:30 - 16:00 | Trying to install the files from api folder, run the npm install, but could not make it work don't know how to use this<br>
-2020.12.19 | 21:30 - 03:00(12.20) | Used the JSON Server and data (please check data.js in the file) to build the app with Angular<br>
+2020.12.19 | 21:30 - 03:00(12.20) | Used the JSON Server and data (please check `data.js` in the file) to build the app with Angular<br>
 2020.12.21 | 23:00 - 24:00 | Added checkout component and order model, asked pass by solutions for JSON Server authentications on stackoverflower<br>
 2020.12.22 | 23:30 - 0:30 | Added Order component for admin
 
