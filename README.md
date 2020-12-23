@@ -1,8 +1,9 @@
 <h1 align="center">Hotel Restaurant SIM</h1>
 
 # 1.0 Desc
-This is the Simulation of a hotel restaurant.
-There is also a simplified edition with VUE, please click [here](https://github.com/puddlejumper26/vue-demo/tree/master#vue-demo)
+- This is the Simulation of a hotel restaurant.
+- There is also a simplified edition with VUE, please click [here](https://github.com/puddlejumper26/vue-demo/tree/master#vue-demo)
+- The functions are not complete due to authentication, but the codes for the functions should be complete. Please check the following content and also code in the components.
 
 ## 1.1 How to run this APP
 - `npm run json`
